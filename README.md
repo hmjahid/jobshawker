@@ -27,10 +27,14 @@ The frontend is a React application. To get started, `cd` into the `jobhawker-fr
 1.  Install dependencies: `npm install`
 2.  Start the development server: `npm start`
 
-### Scraper
+### Scraper (FastAPI Server)
 
-The scraper is a Python script. To get started, `cd` into the `jobhawker-scraper` directory and follow these steps:
+The scraper is a FastAPI web server. To get started, `cd` into the `jobhawker-scraper` directory and follow these steps:
 
 1.  Create a virtual environment: `python -m venv venv`
 2.  Activate the virtual environment: `source venv/bin/activate`
-3.  Run the scraper: `python main.py`
+3.  Install dependencies: `pip install fastapi uvicorn requests beautifulsoup4`
+4.  Run the FastAPI server (default port 8000):  
+    `uvicorn main:app --reload`
+    - To use a different port (e.g., 9000):  
+      `uvicorn main:app --reload --port 9000`
